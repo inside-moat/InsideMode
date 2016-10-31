@@ -1,25 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Movies</h1>
+<h1>Inside Moat Listing Movies</h1>
+
+<%= search_form_for @q do |f| %>
+
+  <%= f.label :title_cont, "search" %>
+  <%= f.search_field :title_cont %>
+
+  <%= f.submit %>
+<% end %>
 
 <table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+	  <thead>
+	    <tr>
+	      <th>タイトル</th>
+	      <th>上映時間</th>
+	    </tr>
+	  </thead>
 
-  <tbody>
-    <% @movies.each do |movie| %>
-      <tr>
-        <td><%= link_to 'Show', movie %></td>
-        <td><%= link_to 'Edit', edit_movie_path(movie) %></td>
-        <td><%= link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Movie', new_movie_path %>
+	  <tbody>
+	    <% @movies.each do |movie| %>
+	      <tr>
+	        <td><%= movie.title %></td>
+	        <td><%= movie.runtime %></td>
+	      </tr>
+	    <% end %>
+	  </tbody>
+	</table>
