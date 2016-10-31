@@ -2,11 +2,7 @@ Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
-<<<<<<< HEAD
   config.cache_classes = false
-=======
-  config.cache_classes = false 
->>>>>>> 17691366243653d62c6859b68dba439dbda9799f
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
@@ -16,11 +12,7 @@ Rails.application.configure do
 
   # Full error reports are disabled and caching is turned on.
   config.consider_all_requests_local       = false
-<<<<<<< HEAD
   config.action_controller.perform_caching = false
-=======
-  config.action_controller.perform_caching = false 
->>>>>>> 17691366243653d62c6859b68dba439dbda9799f
 
   # Enable Rack::Cache to put a simple HTTP cache in front of your application
   # Add `rack-cache` to your Gemfile before enabling this.
