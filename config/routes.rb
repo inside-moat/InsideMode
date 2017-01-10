@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :posts
+  resources :news
+  resources :posts do
+    get :search, on: :collection
+  end
+
   resources :movies do
     get :download
   end

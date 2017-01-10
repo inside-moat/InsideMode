@@ -4,22 +4,21 @@
     .col.s12
       .card.large
         .card-image
-          img[src="/public/assets/images/hoge.jpg"]
           span.card-title
             | Card Title
         .card-content
           p
-            | I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.
+            = image_tag @object.images.first.src.to_s
         .card-action
           a[href="#"]
-            | This is a link
+            = @object.title
   .row
     .col.s12
       .card.large
         .card-image
           img[src="public/assets/image.jpg"]
           span.card-title
-            | Card Title
+            | Card Title
         .card-content
           p
             | I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.

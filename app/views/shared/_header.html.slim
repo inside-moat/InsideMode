@@ -7,13 +7,9 @@ nav
           material-icons
             | InsideMode
       .col.s4
-        <form>
-          <div class="input-field">
-            <input id="search" type="search" required>
-            <label for="search"><i class="material-icons">search</i></label>
-            <i class="material-icons">close</i>
-          </div>
-        </form>
+        form.navbar-form action="/posts/search" method="get" role="search"
+            .input-group.display_responsive
+              input.form-control type="text" placeholder="URLを入力" name="q"
       .col.s3
         ul.right.hide-on-med-and-down
           li

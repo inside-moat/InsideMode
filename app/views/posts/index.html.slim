@@ -1,8 +1,15 @@
+.col.s4
+  form.navbar-form action="/posts/search" method="get" role="search"
+      .input-group.display_responsive
+        input.form-control type="text" placeholder="URLを入力" name="q"
 p#notice
   = notice
 .row
   .col.s3
   .col.s6
+    .row
+    = @object.title
+    = image_tag @object.images.first.src.to_s
     = render 'picks'
     .row
     = render 'picks'
