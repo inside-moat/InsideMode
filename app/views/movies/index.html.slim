@@ -1,11 +1,10 @@
 p#notice
   = notice
 h1
-  | Listing Movies
-table
-  thead
-    tr
-      th[colspan="3"]
+  | Inside Moat Listing Movies
+= search_form_for @q do |f|
+  = f.label :title_cont, "search"
+  = f.search_field :title_cont
   tbody
     - @movies.each do |movie|
       tr
@@ -15,6 +14,6 @@ table
           = link_to 'Edit', edit_movie_path(movie)
         td
           = link_to 'Destroy', movie, method: :delete, data: { confirm: 'Are you sure?' }
-|  ほほげほgへお 
-br
-= link_to 'New Movie', new_movie_path
+  |  ぽげぽげ 
+  br
+  = f.submit

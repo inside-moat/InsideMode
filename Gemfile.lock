@@ -167,10 +167,6 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
-<<<<<<< HEAD
-    spring (2.0.0)
-      activesupport (>= 4.2)
-=======
     slim (3.0.7)
       temple (~> 0.7.6)
       tilt (>= 1.3.3, < 2.1)
@@ -178,8 +174,8 @@ GEM
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (~> 3.0)
-    spring (1.7.2)
->>>>>>> 0c0c3a4fbb5d45b77ae3b7c6e311ee3662e41e3f
+    spring (2.0.0)
+      activesupport (>= 4.2)
     sprockets (3.7.0)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
