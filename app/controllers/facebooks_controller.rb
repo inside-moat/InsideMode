@@ -5,11 +5,14 @@ class FacebooksController < ApplicationController
   # GET /facebooks.json
   def index
     @facebooks = Facebook.all
+    @facebook = Facebook.new
   end
 
   # GET /facebooks/1
   # GET /facebooks/1.json
   def show
+    @facebooks = Facebook.all
+    @facebook = Facebook.new
   end
 
   # GET /facebooks/new
@@ -69,6 +72,6 @@ class FacebooksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def facebook_params
-      params.fetch(:facebook, {})
+			params.require(:facebook).permit(:mail,:password)
     end
 end
